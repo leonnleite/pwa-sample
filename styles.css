@@ -1,0 +1,619 @@
+.taguatinga-header .mdl-menu__container {
+    z-index: 50;
+    margin: 0 !important;
+    color: #fff
+}
+
+.taguatinga-header {
+    overflow: visible;
+    background-color: transparent;
+    color: #fff;
+}
+
+.taguatinga-header .material-icons {
+    color: #FFF !important;
+}
+
+.taguatinga-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #FFF;
+}
+
+.taguatinga-header .mdl-navigation__link {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 14px;
+}
+.taguatinga-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.taguatinga-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 800px;
+}
+
+.taguatinga-search-box.is-focused + .taguatinga-navigation-container {
+    opacity: 0;
+    width: 100px;
+}
+
+
+.taguatinga-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+}
+
+.taguatinga-navigation .mdl-navigation__link:hover {
+    border-bottom: 4px solid #8bc34a;
+}
+
+.taguatinga-search-box {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.taguatinga-more-button {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.taguatinga-drawer .mdl-layout-title {
+    padding-top: 100px;
+    font-size: 28px;
+    background: #405D7B;
+    color: #FFFFFF;
+}
+
+
+
+body::before {
+    background-size: cover;
+    background-attachment: fixed;
+    content: '';
+    will-change: transform;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+}
+@media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
+       (max-width: 512px)  and (min-resolution: 1.5dppx),
+       (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
+       (max-width: 1024px) and (max-resolution: 1.5dppx) {
+  body::before {
+    background-image: url('images/bg_md.jpg');
+  }
+}
+@media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
+       (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
+       (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
+       (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+  body::before {
+    background-image: url('images/bg_lg.jpg');
+  }
+}
+@media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
+       (min-width: 1025px) and (min-resolution: 1.5dppx),
+       (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
+       (min-width: 2049px) and (max-resolution: 1.5dppx) {
+  body::before {
+    background-image: url('images/bg_xlg.jpg');
+  }
+}
+body .taguatinga-blog {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.taguatinga-blog .taguatinga-blog__posts {
+  max-width: 900px;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.taguatinga-blog.mdl-layout .mdl-layout__content {
+  padding-top: 230px;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.taguatinga-blog .mdl-card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  min-height: 360px;
+}
+.taguatinga-blog .mdl-card__title {
+  padding: 16px;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.taguatinga-blog .mdl-card__media {
+  box-sizing: border-box;
+  background-size: cover;
+  padding: 24px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+}
+.taguatinga-blog .mdl-card__media a,
+.taguatinga-blog .mdl-card__title a {
+  color: inherit;
+  text-shadow: 2px 3px 4px #000;
+}
+.taguatinga-blog .mdl-card__supporting-text {
+  min-height: 64px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.taguatinga-blog .mdl-card__supporting-text strong {
+  font-weight: 400;
+}
+.taguatinga-blog .mdl-card__media ~ .mdl-card__supporting-text {
+  min-height: 64px;
+}
+.taguatinga-blog .mdl-card__supporting-text:not(:last-child) {
+  box-sizing: border-box;
+  min-height: 76px;
+}
+.taguatinga-blog:not(.taguatinga-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.taguatinga-blog .mdl-card__actions:first-child {
+  margin-left: 0;
+}
+.taguatinga-blog .meta {
+  box-sizing: border-box;
+  padding: 16px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: auto;
+}
+.taguatinga-blog .meta > .meta__favorites{
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.taguatinga-blog .meta > .meta__favorites .material-icons {
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.taguatinga-blog .mdl-card .meta.meta--fill {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.taguatinga-blog .meta > *:first-child {
+  margin-right: 16px;
+}
+.taguatinga-blog .meta > * {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.taguatinga-blog.is-small-screen .taguatinga-blog__posts > .mdl-card.coffee-pic {
+  -webkit-order: 0;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.taguatinga-blog.is-small-screen .taguatinga-blog__posts > .mdl-card.something-else {
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
+}
+.taguatinga-blog .coffee-pic .mdl-card__media {
+  background-image: url('images/coffee.jpg');
+}
+
+.taguatinga-blog .taguatinga-shooping-pic .mdl-card__media {
+    background-image: url('images/taguatinga-shopping.jpg');
+}
+#vibrate-content .mdl-card__media {
+    background-image: url('images/vibrar.jpg');
+}
+#battery-content .mdl-card__media {
+    background-image: url("images/taguaparque.png");
+}
+#mic-content .mdl-card__media {
+    background-image: url("images/abelbeetle.jpg");
+}
+#qrcode-content .mdl-card__media {
+    background-image: url("images/qr-code.jpg");
+}
+
+#barras-content .mdl-card__media {
+    background-image: url("images/zebra.jpg");
+}
+
+.taguatinga-blog .something-else .mdl-card__media {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.taguatinga-blog .something-else > button {
+  position: absolute;
+  top: 0;
+  right: 28px;
+  -webkit-transform: translate(0px, -28px);
+          transform: translate(0px, -28px);
+}
+.taguatinga-blog .something-else .mdl-card__media {
+  font-size: 13px;
+  font-weight: 500;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.taguatinga-blog .something-else .mdl-card__media img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+.taguatinga-blog .something-else .mdl-card__supporting-text {
+  background-color: #F5F5F5;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.taguatinga-blog .on-the-road-again .mdl-card__media {
+  background-image: url('images/road.jpg');
+}
+.taguatinga-blog .shopping .mdl-card__media {
+  background-image: url('images/shopping.jpg');
+}
+.taguatinga-blog .taguatinga-blog__posts > .taguatinga-nav {
+  margin: 12px 15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: 500;
+}
+.taguatinga-blog .taguatinga-blog__posts > .taguatinga-nav > .taguatinga-nav__button {
+  color: white;
+  text-decoration: none;
+}
+.taguatinga-blog .taguatinga-blog__posts > .taguatinga-nav .mdl-button {
+  color: rgba(0,0,0,0.54);
+  background-color: white;
+}
+.taguatinga-blog .taguatinga-blog__posts > .taguatinga-nav > .taguatinga-nav__button:first-child .mdl-button {
+  margin-right: 16px;
+}
+.taguatinga-blog .taguatinga-blog__posts > .taguatinga-nav > .taguatinga-nav__button:last-child .mdl-button {
+  margin-left: 16px;
+}
+.taguatinga-blog .mdl-card > a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+.taguatinga-blog .mdl-card h3 {
+  margin: 0;
+}
+.taguatinga-blog .mdl-card h3 a {
+  text-decoration: none;
+}
+.taguatinga-blog .mdl-card h3.quote:before, .taguatinga-blog .mdl-card h3.quote:after {
+  display: block;
+  font-size: 3em;
+  margin-top: 0.5em;
+}
+.taguatinga-blog .mdl-card h3.quote:before {
+  content: '“';
+}
+.taguatinga-blog .mdl-card h3.quote:after {
+  content: '”';
+}
+.taguatinga-blog--blogpost .custom-header {
+  background-color: transparent;
+}
+.taguatinga-blog--blogpost .taguatinga-blog__posts > .mdl-card .mdl-card__media {
+  background-image: url('images/road_big.jpg');
+  height: 280px;
+}
+.taguatinga-blog--blogpost .comments {
+  background-color: #EEE;
+}
+.taguatinga-blog--blogpost .meta > * {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.taguatinga-blog--blogpost .meta + .mdl-card__supporting-text {
+  border: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.taguatinga-blog--blogpost .meta + .mdl-card__supporting-text p {
+  max-width: 512px;
+  margin: 16px auto;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.taguatinga-blog--blogpost .comments {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 32px;
+  box-sizing: border-box;
+}
+.taguatinga-blog--blogpost .comments > form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 16px;
+}
+.taguatinga-blog--blogpost .comments > form .mdl-textfield {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 16px;
+  color: rgb(97, 97, 97);
+}
+/* Workaround for Firefox.
+ * User agent stylesheet kept overwriting the font in FF only.
+ */
+.taguatinga-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.taguatinga-blog--blogpost .comments > form .mdl-textfield input,
+.taguatinga-blog--blogpost .comments > form .mdl-textfield textarea {
+  resize: none;
+}
+.taguatinga-blog--blogpost .comments > form button {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.24);
+  color: white;
+}
+.taguatinga-blog--blogpost .comments .comment {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__header > .comment__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  margin-right: 16px;
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__header > .comment__author {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__text {
+  line-height: 1.5em;
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__actions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8em;
+  margin-top: 16px;
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__actions button {
+  margin-right: 16px;
+  color: rgba(0, 0, 0, 0.24);
+}
+.taguatinga-blog--blogpost .comments .comment > .comment__answers {
+  padding-top: 32px;
+  padding-left: 48px;
+}
+
+.taguatinga-blog--blogpost .taguatinga-back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+  z-index: 9999;
+}
+.taguatinga-blog .section-spacer {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.taguatinga-blog .something-else {
+  overflow: visible;
+  z-index: 10;
+}
+.taguatinga-blog .amazing .mdl-card__title {
+  background-color: #263238;
+}
+.taguatinga-blog .minilogo {
+  width: 44px;
+  height: 44px;
+  background-image: url('images/avatar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border-radius: 22px;
+  background-color: #F5F5F5;
+}
+
+/* Fixes for IE 10 */
+.mdl-grid {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.social-btn {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.46;
+  border-radius: 2px;
+}
+.social-btn__twitter {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
+}
+.social-btn__blogger {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
+}
+.social-btn__gplus {
+  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
+}
+.social-btn__share {
+  color: rgba(0, 0, 0, 0.54);
+  background: transparent;
+}
+
+.taguatinga-blog .mdl-mini-footer {
+  margin-top: 80px;
+  height: 120px;
+  padding: 40px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+
+
+
+/** meu **/
+
+.taguatinga-lojas .mdl-card__title {
+    color: #fff;
+    height: 76px;
+    background: url('images/lojas.jpg') bottom left;
+
+}
