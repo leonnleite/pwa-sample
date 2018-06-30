@@ -1,0 +1,22 @@
+{
+  "name": "Progressive Web Apps - Exemplos",
+  "short_name": "PWA - Exemplos",
+  "theme_color": "#607D8B",
+  "icons": [
+    {
+      "src": "images/cp-500.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "images/android-desktop.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+
+  "scope": "/",
+  "start_url": "/pwa-sample/",
+  "background_color": "#EFEFEF",
+  "display": "standalone"
+}
