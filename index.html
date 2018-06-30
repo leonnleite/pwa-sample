@@ -22,13 +22,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Exemplos de progressive web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+
     <title>Progressive Web Apps</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#FF4081">
 
-    <link rel="icon" sizes="192x192" href="images/ios-desktop.png">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -358,11 +360,11 @@
   </body>
   <script>
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-      var link = el.querySelector('a');
+      const link = el.querySelector('a');
       if(!link) {
         return;
       }
-      var target = link.getAttribute('href');
+      const target = link.getAttribute('href');
       if(!target) {
         return;
       }
