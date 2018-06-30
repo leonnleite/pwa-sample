@@ -13,8 +13,7 @@
       "type": "image/png",
       "sizes": "192x192"
     }
-  ]
-
+  ],
   "scope": "/",
   "start_url": "/pwa-sample/",
   "background_color": "#EFEFEF",
