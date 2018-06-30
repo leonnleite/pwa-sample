@@ -24,7 +24,7 @@ if ('Notification' in window) {
         let body = $('#local-notification-body').val();
 
         new Notification(title, {
-            icon: '/images/icone-0' + iconNumber + '.png',
+            icon: window.location.href + 'images/icone-0' + iconNumber + '.png',
             body: body
         })
     }

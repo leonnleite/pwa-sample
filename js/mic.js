@@ -19,8 +19,8 @@ if (navigator.mediaDevices) {
                     mediaRecorder.start();
                     console.log(mediaRecorder.state);
                     console.log("recorder started");
-                    record.style.background = "red";
-                    record.style.color = "black";
+                    $('#mic').hide();
+                    $('#stop').show();
                 };
 
                 let stop = $('#stop')[0];
@@ -28,8 +28,10 @@ if (navigator.mediaDevices) {
                     mediaRecorder.stop();
                     console.log(mediaRecorder.state);
                     console.log("recorder stopped");
-                    record.style.background = "";
+                    record.style.display = "";
                     record.style.color = "";
+                    $('#stop').hide();
+                    $('#mic').show();
                 };
 
                 mediaRecorder.onstop = function (e) {

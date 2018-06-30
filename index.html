@@ -26,7 +26,7 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#333333">
+    <meta name="theme-color" content="#FF4081">
 
     <link rel="icon" sizes="192x192" href="images/ios-desktop.png">
 
@@ -49,7 +49,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-teal.min.css" />
     <link rel="stylesheet" href="styles.css">
     <style>
     #view-source {
@@ -66,8 +66,8 @@
   <body>
 
 
-    <div class="taguatinga-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <header class="taguatinga-header mdl-layout__header mdl-layout__header--waterfall"><div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons" style="color: #fff"></i></div>
+    <div class=" mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <header class=" mdl-layout__header mdl-layout__header--waterfall"><div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons" style="color: #fff"></i></div>
         <div class="mdl-layout__header-row">
             <span class="taguatinga-title mdl-layout-title">
               Leonn Leite
@@ -75,32 +75,22 @@
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="taguatinga-header-spacer mdl-layout-spacer"></div>
           <!-- Navigation -->
-          <div class="taguatinga-navigation-container">
-            <nav class="taguatinga-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="pagamento.html">Pagar Estacionamento</a>
-            </nav>
-          </div>
+
         </div>
       </header>
       <div class="taguatinga-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">Leonn Leite</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="pagamento.html">Pagar Estacionamento</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-        </nav>
       </div>
 
 
 
 
       <main class="mdl-layout__content">
-        <div class="taguatinga-blog__posts mdl-grid">
+        <div class=" mdl-grid">
 
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="battery-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Que tal ver a bateria?</a></h3>
+          <div class="mdl-card mdl-cell mdl-cell--12-col" style="display: none" id="battery-content">
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Que tal ver a bateria?</h3>
             </div>
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
               &nbsp;<i style="color: red" id="qt-battery"></i>% de bateria e&nbsp;<i id="status-battery"></i>
@@ -109,8 +99,8 @@
 
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="mic-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Gravar Audio</a></h3>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Gravar Audio</h3>
             </div>
 
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
@@ -123,7 +113,7 @@
                 <button id="mic" class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                   <i class="material-icons" style="color: white">mic</i>
                 </button>
-                <button id="stop" class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <button id="stop" class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="display: none">
                   <i class="material-icons" style="color: white">stop</i>
                 </button>
                 <div id="sound-clips"></div>
@@ -132,8 +122,8 @@
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="connection-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Saber o tipo de conexão?</a></h3>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Saber o tipo de conexão?</h3>
             </div>
 
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
@@ -142,8 +132,8 @@
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="vibrate-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Vibrar?</a></h3>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Vibrar?</h3>
             </div>
 
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
@@ -158,8 +148,8 @@
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="online-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Cê tá online ou não?</a></h3>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Cê tá online ou não?</h3>
             </div>
 
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
@@ -168,23 +158,102 @@
             </div>
           </div>
 
+
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="screen-orientation-content">
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Orientação da tela?</h3>
+            </div>
+
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
+              <div id="deviceScreen"></div>
+
+              <p>Sua orientação atual é <b id="orientationScreenType">desconhecida</b>.</p>
+
+              <p>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="lockScreen">Travar na orientação atual</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="unlockScreen">Destravar</button>
+              </p>
+
+              <p id="logTargetScreen"></p>
+            </div>
+          </div>
+
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="fullscreen-content">
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Fullscreen?</h3>
+            </div>
+
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
+              <p>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="startFullscreen">Fullscreen na tela toda</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised " id="exitFullscreen" style="display: none">Sair do fullscreen</button>
+              </p>
+
+              <div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="startFullscreenBox">Start fullscreen on just canário pistola</button>
+                <div id="fullscreenBox" style="width: 300px">
+                  <img src="images/canario-pistola.jpeg" style="width: 100%;">
+                </div>
+              </div>
+
+              <p id="logTarget"></p>
+            </div>
+          </div>
+
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="devicememory-content">
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Memoria RAM aproximada do seu device?</h3>
+            </div>
+
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
+              Sua memoria RAM aproximadamente ~<span id="devicememory-content-data"></span> GB
+            </div>
+          </div>
+
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="device-orientation-content">
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Esse é massa, Posição do dispositivo?</h3>
+            </div>
+
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
+              <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">Tilt Left/Right [gamma]</td>
+                  <td id="doTiltLR"></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">Tilt Front/Back [beta]</td>
+                  <td id="doTiltFB"></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">Direction [alpha]</td>
+                  <td id="doDirection"></td>
+                </tr>
+              </table>
+              <img src="images/canario-pistola.jpeg" style="width: 100%;" id="imageLogo">
+            </div>
+          </div>
+
+
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" id="qrcode-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="https://qrcodescan.in/">Quer ler um QR code?</a></h3>
+            <div class="mdl-card__title">
+              <h3><a href="https://qrcodescan.in/">Quer ler um QR code?</h3>
             </div>
 
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" id="barras-content" >
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="https://serratus.github.io/quaggaJS/examples/live_w_locator.html">Quer ler um código de barras?</a></h3>
+            <div class="mdl-card__title" >
+              <h3>
+                <a href="https://serratus.github.io/quaggaJS/examples/live_w_locator.html" >Quer ler um código de barras?</a>
+              </h3>
             </div>
 
           </div>
 
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="payment-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Pagamento facil?</a></h3>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Pagamento facil?</h3>
             </div>
 
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
@@ -200,8 +269,8 @@
             </div>
           </div>
           <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col" style="display: none" id="local-notification-content">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="javascript:void()">Notification (local)?</a></h3>
+            <div class="mdl-card__title">
+              <h3 class="mdl-card__title-text">Notification (local)?</h3>
             </div>
 
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text" >
@@ -253,6 +322,7 @@
               </ul>
             </div>
 
+
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text" style="border-top: none;" >
 
               <button id="local-notification-permission" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
@@ -273,7 +343,7 @@
     <!--<a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-color&#45;&#45;accent mdl-color-text&#45;&#45;white">View Source</a>-->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
     <script src="js/battery.js"></script>
     <script src="js/payment.js"></script>
     <script src="js/mic.js"></script>
@@ -281,6 +351,10 @@
     <script src="js/connection.js"></script>
     <script src="js/online.js"></script>
     <script src="js/local-notification.js"></script>
+    <script src="js/fullscreen.js"></script>
+    <script src="js/device-memory.js"></script>
+    <script src="js/device-orientation.js"></script>
+    <script src="js/screen-orientation.js"></script>
   </body>
   <script>
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
